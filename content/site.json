@@ -1,0 +1,176 @@
+{
+  "profile": {
+    "name": "Avinash Mallick",
+    "title": "AI Systems Engineer",
+    "location": "London, UK",
+    "email": "avinashmallickuk@gmail.com",
+    "headline": "AI systems engineer specializing in agentic AI platforms, context engineering, and production-scale GenAI infrastructure.",
+    "summary": "I design and deploy LangGraph-based workflows, RAG pipelines, and observability-driven AI microservices across venture-backed and enterprise environments. My work focuses on building reliable long-running agents, scalable backend systems, and evaluation-driven product architecture.",
+    "availability": "Open to AI systems engineering and product-focused software roles.",
+    "cvPath": "/assets/Avinash_Mallick_CV.pdf"
+  },
+  "socials": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/avinash-mallick" },
+    { "label": "GitHub", "url": "https://github.com/avimallick" },
+    { "label": "Email", "url": "mailto:avinashmallickuk@gmail.com" }
+  ],
+  "highlights": [
+    { "label": "Location", "value": "London, UK" },
+    { "label": "Education", "value": "UCL MSc (Merit)" },
+    { "label": "Hackathon Wins", "value": "2" },
+    { "label": "Domain", "value": "Agentic AI Systems" }
+  ],
+  "skills": [
+    "Python",
+    "C#",
+    "Java",
+    "SQL",
+    "JavaScript",
+    "TypeScript",
+    "FastAPI",
+    "LangGraph",
+    "LangChain",
+    "DSPy",
+    "LlamaIndex",
+    "Pydantic",
+    ".NET Core",
+    "ASP.NET",
+    "Angular",
+    "Docker",
+    "Apache Spark",
+    "Ansible",
+    "Azure Cloud",
+    "IBM Cloud",
+    "GitHub Actions"
+  ],
+  "experience": [
+    {
+      "period": "Oct 2025 - Present",
+      "role": "AI Systems Engineer - Consultant",
+      "company": "Post Urban Ventures (London, UK)",
+      "bullets": [
+        "Architecting agentic AI infrastructure for venture-backed products including Chelo.ai with scalable RAG pipelines, knowledge graph integrations, and LangGraph orchestration.",
+        "Built modular AI microservices using FastAPI and Python for rapid LLM automation prototyping and deployment.",
+        "Designed cloud-native backend systems integrating WhatsApp Business APIs, analytics engines, and AI-driven workflow automation.",
+        "Advising founders and engineering teams on GenAI architecture and scalable AWS deployment strategy."
+      ]
+    },
+    {
+      "period": "Nov 2025 - Present",
+      "role": "AI Engineer",
+      "company": "Converso (London, UK)",
+      "bullets": [
+        "Designed and deployed LangGraph-based conversational AI agents for CRM automation with structured ingestion and retrieval workflows.",
+        "Architected and deployed a self-hosted Langfuse observability stack with end-to-end tracing, evaluation workflows, and production-grade metrics.",
+        "Developed scalable document processing and RAG pipelines using embeddings, vector search, and structured validation.",
+        "Collaborated with product and engineering to ship monitored, evaluation-driven AI features in production."
+      ]
+    },
+    {
+      "period": "Jun 2025 - Sep 2025",
+      "role": "Software Engineer, Contract (Joint UCL-IBM Collaboration)",
+      "company": "IBM (London, UK)",
+      "bullets": [
+        "Architected an Agentic Anti-Pattern Remediation System using RAG pipelines with LangChain + LangGraph, reducing legacy modernization time by 60%.",
+        "Achieved 85% anti-pattern detection precision on 10,000+ lines of Java code.",
+        "Implemented DSPy and Granite LLM workflows with FastAPI, Pydantic, and TinyDB backend architecture.",
+        "Collaborated with UCL research teams on AI-powered software modernization methodologies."
+      ]
+    },
+    {
+      "period": "Jun 2023 - Sep 2024",
+      "role": "Associate Software Engineer",
+      "company": "Eurofins Scientific - Eurofins IT Delivery Centre (Bangalore, India)",
+      "bullets": [
+        "Delivered full-stack eCommerce systems handling 25,000+ monthly transactions and improved checkout conversion by 12%.",
+        "Spearheaded Azure cloud segregation for 15,000+ users across 8 global regions, reducing deployment time by 45%.",
+        "Reduced infrastructure costs by £30,000 annually through platform optimization.",
+        "Engineered cross-tenant networking for 200+ microservices with 99.8% reliability."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "period": "Sept 2024 - Sept 2025",
+      "degree": "Master of Science, Software Systems Engineering",
+      "institution": "University College London",
+      "details": [
+        "Grade: Merit",
+        "Coursework: Engineering of Data Analysis, Applied Deep Learning, Software Development Practices"
+      ]
+    },
+    {
+      "period": "July 2019 - April 2023",
+      "degree": "Bachelor of Technology (Honours), Computer Science and Engineering",
+      "institution": "Hindustan Institute of Technology and Science",
+      "details": [
+        "Coursework: Data Structures, Algorithms, Machine Learning, Cloud Computing, Compiler Theory, Distributed Systems",
+        "Student of the Year Award for academic performance and leadership among 3000+ graduating students"
+      ]
+    }
+  ],
+  "achievements": [
+    "Winner - Best Use Case of ACI.dev Award at AI Tooling in SDLC Hackathon (Tessl HQ) for Anti-Pattern Remediation Tool.",
+    "Winner - Best Use Case of Langflow Award at DataStax Hacking Agents Hackathon (150+ participants across Europe).",
+    "Student of the Year, Hindustan Institute of Technology and Science (2023).",
+    "Outstanding Contributor recognition at Eurofins Scientific for exceeding delivery targets by 130%."
+  ],
+  "projects": [
+    {
+      "name": "TopoIndex Python Library",
+      "description": "Developed a molecular analysis library processing 1,000+ chemical compounds daily for QSAR research used by 200+ pharmaceutical researchers globally. Achieved 99.7% topological index accuracy with 55% faster computation.",
+      "stack": ["Python", "RDKit", "NetworkX", "Poetry", "PyPI", "GitHub Actions"],
+      "link": "#"
+    },
+    {
+      "name": "Agentic COBOL to Python Migration",
+      "description": "Built an AI-powered migration framework with 78% automated conversion accuracy for legacy COBOL systems containing 50,000+ lines of code. Won DataStax Hacking Agents Hackathon Best Use Case of Langflow.",
+      "stack": ["Langflow", "Python", "LLMs", "Semi-Formal Verification"],
+      "link": "#"
+    },
+    {
+      "name": "Distributed QML Circuit Simulator",
+      "description": "Architected distributed simulation for 300,000+ MNISQ circuits across 12 Ubuntu VMs with 40% performance improvement over centralized approaches and 99.95% uptime under 10TB+ loads.",
+      "stack": ["Ansible", "Dask", "Apache Spark", "MPI", "Qiskit Aer", "QuEST"],
+      "link": "#"
+    }
+  ],
+  "blogs": [
+    {
+      "slug": "building-reliable-agentic-ai-systems",
+      "title": "Building Reliable Agentic AI Systems in Production",
+      "date": "2026-02-14",
+      "tags": ["Agentic AI", "Reliability", "Systems"],
+      "excerpt": "How I design agent workflows that are observable, evaluable, and production-ready.",
+      "content": [
+        "Reliable agentic systems are less about prompt tricks and more about architecture: structured state, deterministic orchestration, and measurable outcomes.",
+        "I prefer LangGraph-style explicit state machines because they make failure handling and retries predictable under real traffic.",
+        "Observability is non-negotiable. End-to-end traces, evaluation checkpoints, and quality metrics are what let teams ship quickly without losing control."
+      ]
+    },
+    {
+      "slug": "rag-pipelines-for-real-products",
+      "title": "RAG Pipelines for Real Product Environments",
+      "date": "2026-02-02",
+      "tags": ["RAG", "Backend", "Product Engineering"],
+      "excerpt": "Design patterns for retrieval systems that stay robust beyond demos.",
+      "content": [
+        "Most RAG failures come from weak ingestion and poor schema discipline, not model quality.",
+        "I focus on structured ingestion, validation, chunking strategy, and retrieval scoring before tuning model prompts.",
+        "When retrieval quality is treated like a backend reliability problem, user-facing quality improves dramatically."
+      ]
+    },
+    {
+      "slug": "ai-observability-with-langfuse",
+      "title": "AI Observability with a Self-Hosted Langfuse Stack",
+      "date": "2026-01-18",
+      "tags": ["Observability", "Langfuse", "MLOps"],
+      "excerpt": "What changed after introducing tracing, evaluation, and metrics into agent workflows.",
+      "content": [
+        "Self-hosting observability gave us full control over traces, evaluations, and data boundaries.",
+        "The biggest benefit was faster iteration: regressions became visible early, and prompt or retrieval changes were easier to validate.",
+        "In AI products, observability is a product velocity multiplier, not just a monitoring feature."
+      ]
+    }
+  ]
+}

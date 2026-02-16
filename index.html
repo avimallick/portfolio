@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avinash Mallick | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <header class="hero block-in">
+        <nav class="topbar">
+          <div id="brand" class="brand">Portfolio</div>
+          <div class="top-links">
+            <a href="#projects">Projects</a>
+            <a href="#writing">Writing</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+        <p class="kicker">Portfolio System</p>
+        <h1 id="hero-title">Avinash Mallick</h1>
+        <p id="hero-headline" class="subtitle"></p>
+        <div class="hero-actions">
+          <a id="cv-link" class="button" href="/assets/Avinash_Mallick_CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+          <a class="button ghost" href="#writing">Read Blogs</a>
+        </div>
+      </header>
+
+      <section id="about" class="card about block-in"></section>
+
+      <section class="card toolbar block-in">
+        <div class="controls">
+          <label for="days">Activity Range</label>
+          <select id="days" name="days">
+            <option value="30">30 days</option>
+            <option value="90">90 days</option>
+            <option value="180">180 days</option>
+            <option value="365" selected>365 days</option>
+          </select>
+          <button id="reload" type="button">Refresh</button>
+        </div>
+        <p id="status" class="status">Ready</p>
+      </section>
+
+      <section class="stats block-in">
+        <article class="stat card"><span>Total Events</span><strong id="total-count">0</strong></article>
+        <article class="stat card"><span>GitHub</span><strong id="github-count">0</strong></article>
+        <article class="stat card"><span>GitLab</span><strong id="gitlab-count">0</strong></article>
+        <article class="stat card"><span>Active Days</span><strong id="active-days">0</strong></article>
+      </section>
+
+      <section class="heatmap-card card block-in">
+        <div class="section-head">
+          <h2>Live Contribution Matrix</h2>
+          <p>Merged GitHub and GitLab daily activity</p>
+        </div>
+        <div class="legend">
+          <span><i class="swatch gh"></i>GitHub</span>
+          <span><i class="swatch gl"></i>GitLab</span>
+          <span><i class="swatch split"></i>Split cell</span>
+        </div>
+        <div class="heatmap-shell">
+          <div id="months" class="months"></div>
+          <div id="heatmap" class="heatmap" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="card section block-in">
+        <div class="section-head">
+          <h2>Selected Projects</h2>
+        </div>
+        <div id="projects-grid" class="projects-grid"></div>
+      </section>
+
+      <section class="card section block-in">
+        <div class="section-head">
+          <h2>Experience</h2>
+        </div>
+        <div id="experience-list" class="experience-list"></div>
+      </section>
+
+      <section class="card section block-in">
+        <div class="section-head">
+          <h2>Education</h2>
+        </div>
+        <div id="education-list" class="experience-list"></div>
+      </section>
+
+      <section class="card section block-in">
+        <div class="section-head">
+          <h2>Achievements</h2>
+        </div>
+        <ul id="achievements-list" class="achievements-list"></ul>
+      </section>
+
+      <section class="card section block-in">
+        <div class="section-head">
+          <h2>Skills</h2>
+        </div>
+        <div id="skills-list" class="skills-list"></div>
+      </section>
+
+      <section id="writing" class="card section block-in">
+        <div class="section-head">
+          <h2>Writing</h2>
+          <p>Thoughts on product engineering, systems, and execution</p>
+        </div>
+        <div class="blog-controls">
+          <input id="blog-search" type="search" placeholder="Search posts..." />
+          <div id="blog-tags" class="tag-row"></div>
+        </div>
+        <div id="blog-list" class="blog-list"></div>
+      </section>
+
+      <footer id="contact" class="footer block-in">
+        <p id="contact-line"></p>
+        <div id="social-links" class="social-links"></div>
+      </footer>
+    </main>
+
+    <dialog id="post-dialog" class="post-dialog">
+      <article>
+        <button id="close-post" class="close-post" type="button">Close</button>
+        <h3 id="post-title"></h3>
+        <p id="post-meta" class="post-meta"></p>
+        <div id="post-content" class="post-content"></div>
+      </article>
+    </dialog>
+
+    <div id="tooltip" class="tooltip" hidden></div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
