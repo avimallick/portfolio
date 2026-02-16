@@ -248,13 +248,14 @@ function setCache(key: string, data: ActivityDay[]): void {
   });
 }
 
-function createJsonResponse(body: unknown, status = 200): Response {
+function createJsonResponse(body: unknown, status = 200, extraHeaders: Record<string, string> = {}): Response {
   return new Response(JSON.stringify(body), {
     status,
     headers: {
       "Content-Type": "application/json; charset=utf-8",
       "Cache-Control": "public, max-age=0, s-maxage=43200, stale-while-revalidate=43200",
       "CDN-Cache-Control": "public, max-age=43200, stale-while-revalidate=43200",
+      ...extraHeaders,
     },
   });
 }
@@ -282,13 +283,30 @@ export async function handleActivityRequest(request: Request, env: RuntimeEnv): 
     fetchGitLabCounts(env, fromDate, toDate),
   ]);
 
+  if (githubResult.status === "rejected") {
+    console.error("GitHub activity fetch failed:", githubResult.reason);
+  }
+  if (gitlabResult.status === "rejected") {
+    console.error("GitLab activity fetch failed:", gitlabResult.reason);
+  }
+
   const githubCounts = githubResult.status === "fulfilled" ? githubResult.value : new Map<string, number>();
   const gitlabCounts = gitlabResult.status === "fulfilled" ? gitlabResult.value : new Map<string, number>();
 
   const merged = mergeCounts(dates, githubCounts, gitlabCounts);
   setCache(cacheKey, merged);
 
-  return createJsonResponse(merged);
+  const githubStatus = env.GITHUB_TOKEN && env.GITHUB_USERNAME
+    ? (githubResult.status === "fulfilled" ? "ok" : "error")
+    : "not_configured";
+  const gitlabStatus = env.GITLAB_TOKEN && env.GITLAB_USER_ID
+    ? (gitlabResult.status === "fulfilled" ? "ok" : "error")
+    : "not_configured";
+
+  return createJsonResponse(merged, 200, {
+    "X-Activity-GitHub-Status": githubStatus,
+    "X-Activity-GitLab-Status": gitlabStatus,
+  });
 }
 
 export type { ActivityDay, RuntimeEnv };

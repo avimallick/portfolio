@@ -31,6 +31,24 @@ Response:
   - `s-maxage=43200`
   - `stale-while-revalidate=43200`
 
+## Local Development
+
+```bash
+npm run dev
+```
+
+Then call: `http://localhost:3000/api/activity?days=30`
+
+Debug source status quickly with headers:
+
+```bash
+curl -i "http://localhost:3000/api/activity?days=30"
+```
+
+Look for:
+- `X-Activity-GitHub-Status: ok|error|not_configured`
+- `X-Activity-GitLab-Status: ok|error|not_configured`
+
 ## Vercel Deployment
 
 This repo is configured for Vercel edge functions via `api/activity.ts`.
@@ -52,17 +70,10 @@ Notes:
 - `.env` is gitignored and safe for local storage.
 - Vercel production runtime still needs the same vars set in the Vercel project (`Settings -> Environment Variables`) so edge runtime has them.
 
-## Local Development
+## Other Scripts
 
 ```bash
-npm run dev
-```
-
-Then call: `http://localhost:3000/api/activity?days=30`
-
-## Local type-check
-
-```bash
-npm install
+npm run vercel:dev
 npm run check
+npm run build
 ```
