@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/activity.ts": {
+      "runtime": "edge",
+      "maxDuration": 30
+    }
+  }
+}
